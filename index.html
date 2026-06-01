@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSustentável - Produtividade Verde</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i> <span>Agro<span class="green-text">Sustentável</span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#dicas">Dicas ODS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Produzir Mais, Preservando Sempre</h1>
+            <p>O futuro do agronegócio está no equilíbrio. Use a nossa tecnologia para otimizar seus recursos, reduzir o desperdício e aumentar sua rentabilidade sem agredir o meio ambiente.</p>
+            <a href="#calculadora" class="btn-main">Acessar Calculadora</a>
+        </div>
+    </section>
+
+    <section id="pilares" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Práticas para Alta Produtividade</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <i class="fa-solid fa-seedling card-icon"></i>
+                    <h3>Plantio de Precisão</h3>
+                    <p>Calcular a quantidade exata de sementes evita a competição por nutrientes e maximiza o potencial do solo.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-droplet card-icon"></i>
+                    <h3>Manejo de Água</h3>
+                    <p>Técnicas de irrigação gota a gota reduzem o consumo de recursos hídricos e evitam a erosão do solo.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-arrows-spin card-icon"></i>
+                    <h3>Rotação de Culturas</h3>
+                    <p>Alternar espécies melhora a biologia do solo, quebra ciclos de pragas e reduz a necessidade de defensivos químicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="calc-section section-padding">
+        <div class="container calc-container">
+            <div class="calc-info">
+                <h2>Calculadora de Sementes Sustentável</h2>
+                <p>O superpovoamento de plantas causa gastos desnecessários e reduz a produtividade. Descubra a quantidade ideal de sementes para a sua área com base no **Vigor/Germinação (PMS)** e no espaçamento desejado.</p>
+                <blockquote>
+                    "Otimizar o plantio é o primeiro passo para o desperdício zero no campo."
+                </blockquote>
+            </div>
+
+            <div class="calc-box">
+                <h3>Simulador de Plantio</h3>
+                <form id="seed-form">
+                    <div class="input-group">
+                        <label for="crop">Cultura</label>
+                        <select id="crop" required>
+                            <option value="soja">Soja</option>
+                            <option value="milho">Milho</option>
+                            <option value="feijao">Feijão</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="area">Área do Plantio (Hectares)</label>
+                        <input type="number" id="area" min="0.1" step="0.1" value="1" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="density">Plantas Desejadas por Metro Linear</label>
+                        <input type="number" id="density" min="1" value="12" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="spacing">Espaçamento entre Linhas (Metros)</label>
+                        <input type="number" id="spacing" min="0.1" step="0.05" value="0.45" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="germination">Germinação/Pureza do Lote (%)</label>
+                        <input type="number" id="germination" min="50" max="100" value="90" required>
+                    </div>
+
+                    <button type="submit" class="btn-calc">Calcular Demanda</button>
+                </form>
+
+                <div id="result-box" class="result-box hidden">
+                    <h4>Resultado Estimado:</h4>
+                    <p>Sementes por metro (ajustado): <strong id="res-sem-metro">0</strong></p>
+                    <p>Total de sementes p/ Hectare: <strong id="res-sem-ha">0</strong></p>
+                    <div class="total-highlight">
+                        <span>Total para sua Área:</span>
+                        <h3 id="res-total">0 sementes</h3>
+                    </div>
+                    <p class="eco-tip"><i class="fa-solid fa-earth-americas"></i> Ao plantar a quantidade exata, você protege o ecossistema do solo e economiza recursos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 AgroSustentável. Tecnologia a serviço da natureza.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
